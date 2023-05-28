@@ -39,8 +39,8 @@ public class MainApp extends Application {
         SharedPrefsUtils.setSwitchStates(this,
                                          false,
                                          false,
-                                         true,
-                                         true,
+                                         false,
+                                         false,
                                          false,
                                          false,
                                          false);
