@@ -3,7 +3,7 @@
 
     <!--Main Page-->
     <string name="about_app_button">About app button</string>
-    <string name="about_app_text"><![CDATA[<h4>Privacy Policy</h4>• No data about you or your device is gathered, stored, collected or saved]]></string>
+    <string name="about_app_text"><![CDATA[<h4>V1. Privacy Policy</h4>• No data about you or your device is gathered, stored, collected or saved]]></string>
 
     <!--Switch Labels-->
     <string name="flash">Flash</string>
