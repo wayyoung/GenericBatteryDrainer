@@ -1,16 +1,16 @@
 package com.batterydrainer.ui;
 
 import android.app.Dialog;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.BottomSheetDialog;
-import android.support.design.widget.BottomSheetDialogFragment;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.SwitchCompat;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.widget.SwitchCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -104,7 +104,7 @@ public class SettingsDialogFragment extends BottomSheetDialogFragment {
 
         bottomSheetDialog.setOnShowListener(dialog -> {
             FrameLayout bottomSheet =
-                    bottomSheetDialog.findViewById(android.support.design.R.id.design_bottom_sheet);
+                    bottomSheetDialog.findViewById(com.google.android.material.R.id.design_bottom_sheet);
 
             if (null != bottomSheet) {
                 BottomSheetBehavior behavior = BottomSheetBehavior.from(bottomSheet);

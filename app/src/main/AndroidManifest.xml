@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="com.batterydrainer">
+          xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"
                      tools:ignore="ProtectedPermissions"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-
+    <uses-feature android:name="android.hardware.camera"
+        android:required="false"/>
     <uses-feature android:name="android.hardware.camera2"
                   android:required="false"/>
     <uses-feature android:name="android.hardware.wifi"
@@ -31,10 +35,9 @@
         android:theme="@style/AppTheme"
         android:fullBackupContent="true"
         android:allowBackup="true">
-        <activity android:name="com.batterydrainer.ui.MainActivity">
+        <activity android:name="com.batterydrainer.ui.MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
 

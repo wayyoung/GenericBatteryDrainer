@@ -5,7 +5,7 @@ import android.app.Application;
 import com.batterydrainer.utils.Logg;
 import com.batterydrainer.utils.SharedPrefsUtils;
 
-import io.reactivex.plugins.RxJavaPlugins;
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
 
 /**
  * MainApp

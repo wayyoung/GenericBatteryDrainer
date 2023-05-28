@@ -2,11 +2,11 @@ package com.batterydrainer.managers;
 
 import android.app.Application;
 import android.graphics.Bitmap;
-import android.support.v8.renderscript.Allocation;
-import android.support.v8.renderscript.Element;
-import android.support.v8.renderscript.RenderScript;
-import android.support.v8.renderscript.ScriptIntrinsicBlur;
-import android.support.v8.renderscript.Type;
+import androidx.renderscript.Allocation;
+import androidx.renderscript.Element;
+import androidx.renderscript.RenderScript;
+import androidx.renderscript.ScriptIntrinsicBlur;
+import androidx.renderscript.Type;
 
 import com.batterydrainer.ScriptC_matmul;
 import com.batterydrainer.utils.Logg;
@@ -15,10 +15,10 @@ import java.nio.ByteBuffer;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import io.reactivex.Single;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
+import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.disposables.CompositeDisposable;
+import io.reactivex.rxjava3.disposables.Disposable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 /**
  * RenderscriptManager

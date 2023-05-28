@@ -13,10 +13,10 @@ import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Pattern;
 
-import io.reactivex.Single;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
+import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.disposables.CompositeDisposable;
+import io.reactivex.rxjava3.disposables.Disposable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 import static android.content.Context.POWER_SERVICE;
 
@@ -112,8 +112,8 @@ public class CpuManager {
         if (wakelockOn) {
             PowerManager powerManager = (PowerManager) application.getSystemService(POWER_SERVICE);
             if (powerManager != null) {
-                wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "BatteryDrainerWakelock");
-                wakeLock = powerManager.newWakeLock(PowerManager.FULL_WAKE_LOCK, "BatteryDrainerWakelock");
+                wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "batterydrainer:BatteryDrainerWakelock");
+                wakeLock = powerManager.newWakeLock(PowerManager.FULL_WAKE_LOCK, "batterydrainer:BatteryDrainerWakelock");
                 wakeLock.acquire();
             }
         } else {

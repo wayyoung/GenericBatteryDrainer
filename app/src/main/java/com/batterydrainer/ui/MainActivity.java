@@ -1,8 +1,8 @@
 package com.batterydrainer.ui;
 
 import android.app.Activity;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -10,11 +10,11 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.BatteryManager;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SwitchCompat;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,8 +30,8 @@ import com.batterydrainer.utils.PermissionUtils;
 import com.batterydrainer.utils.SharedPrefsUtils;
 import com.batterydrainer.R;
 
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.disposables.Disposable;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -118,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
         filter.addAction("com.batterydrainer.START_BATTERY_DRAIN");
         filter.addAction("com.batterydrainer.STOP_BATTERY_DRAIN");
         filter.addAction("com.batterydrainer.ENABLE_GPU");
-        filter.addAction("com.batterydrainer.ENABLE_FLASHLIGHT");
+        filter.addAction("com.batterydrainer.ENABLE_FLASH_LIGHT");
+        filter.addAction("com.batterydrainer.ENABLE_SCREEN_LOCK");
         filter.addAction("com.batterydrainer.DRAIN_LIMIT");
 
         this.registerReceiver(broadcastReceiver,filter);
@@ -389,6 +390,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
             case PermissionUtils.REQUEST_CODE_BLUETOOTH: {
                 if (resultCode == Activity.RESULT_OK) {

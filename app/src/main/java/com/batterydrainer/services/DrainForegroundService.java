@@ -13,9 +13,9 @@ import android.graphics.BitmapFactory;
 import android.os.BatteryManager;
 import android.os.Build;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
 import android.widget.Toast;
 
 import com.batterydrainer.BuildConfig;
@@ -103,11 +103,32 @@ public class DrainForegroundService extends Service {
 
         notificationIntent.setAction(ACTION_ACTIVITY);
         notificationIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+        // PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+
+        PendingIntent pendingIntent;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            pendingIntent = PendingIntent.getActivity(this,
+                0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+
+        }else {
+            pendingIntent = PendingIntent.getActivity(this,
+                0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        }
 
         Intent stopIntent = new Intent(this, DrainForegroundService.class);
         stopIntent.setAction(ACTION_STOP);
-        PendingIntent pendingStopIntent = PendingIntent.getService(this, 0, stopIntent, 0);
+        // PendingIntent pendingStopIntent = PendingIntent.getService(this, 0, stopIntent, 0);
+        PendingIntent pendingStopIntent;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            pendingStopIntent = PendingIntent.getActivity(this,
+                0, stopIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+
+        }else {
+            pendingStopIntent = PendingIntent.getActivity(this,
+                0, stopIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        }
 
         Bitmap icon        = BitmapFactory.decodeResource(getApplication().getResources(), R.drawable.ic_battery_alert_2);
         Bitmap emptyBitmap = Bitmap.createBitmap(128, 128, Bitmap.Config.ARGB_8888);

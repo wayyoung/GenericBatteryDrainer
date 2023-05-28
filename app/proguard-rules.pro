@@ -77,3 +77,9 @@
 
 # Disable Optimizations
 -dontoptimize
+
+-dontwarn androidx.renderscript.*
+-keepclassmembers class androidx.renderscript.RenderScript {
+  native *** rsn*(...);
+  native *** n*(...);
+}

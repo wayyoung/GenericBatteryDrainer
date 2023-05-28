@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,7 +10,7 @@
     tools:ignore="RtlHardcoded">
 
     <!--region Toolbar-->
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbar_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,11 +65,11 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@id/tv_toolbar_title"
             />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <!--endregion-->
 
     <!--region Battery Status Display-->
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container_battery_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar_main"
         >
         <!--region Guidelines-->
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
             app:layout_constraintGuide_percent="0.33"
             />
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl66"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -172,7 +172,7 @@
             />
         <!--endregion-->
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <!--endregion-->
 
     <ScrollView
@@ -191,7 +191,7 @@
         app:layout_constraintTop_toBottomOf="@id/container_battery_info"
         >
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
@@ -232,7 +232,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_subtitle_flash"
                 />
 
-            <android.support.v7.widget.SwitchCompat
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_flash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -281,7 +281,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_subtitle_screen"
                 />
 
-            <android.support.v7.widget.SwitchCompat
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_screen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -330,7 +330,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_subtitle_cpu"
                 />
 
-            <android.support.v7.widget.SwitchCompat
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_cpu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -379,7 +379,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_subtitle_gpu"
                 />
 
-            <android.support.v7.widget.SwitchCompat
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_gpu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -428,7 +428,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_subtitle_gps"
                 />
 
-            <android.support.v7.widget.SwitchCompat
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_gps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -477,7 +477,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_subtitle_wifi"
                 />
 
-            <android.support.v7.widget.SwitchCompat
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_wifi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -537,7 +537,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_subtitle_bluetooth"
                 />
 
-            <android.support.v7.widget.SwitchCompat
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_bluetooth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -549,7 +549,7 @@
                 />
             <!--endregion-->
 
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <TextView
@@ -576,4 +576,4 @@
         />
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
