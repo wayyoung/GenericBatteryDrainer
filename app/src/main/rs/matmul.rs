@@ -1,6 +1,6 @@
 #pragma version(1)
 #pragma rs_fp_relaxed
-#pragma rs java_package_name(com.lohjason.genericbatterydrainer)
+#pragma rs java_package_name(com.batterydrainer)
 
 const float *matA;
 const float *matB;

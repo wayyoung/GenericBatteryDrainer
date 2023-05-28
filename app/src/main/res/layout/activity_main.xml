@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/material_grey_300"
-    tools:context=".ui.MainActivity"
+    tools:context="com.batterydrainer.ui.MainActivity"
     tools:ignore="RtlHardcoded">
 
     <!--region Toolbar-->

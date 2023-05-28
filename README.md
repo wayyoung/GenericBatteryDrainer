@@ -1,4 +1,4 @@
-# Generic Battery Drainer
+# Battery Drainer
 
 ## About this app
 It drains your battery. That's about it.  
@@ -46,7 +46,7 @@ We do not display or push any advertisements, whether targeted or untargeted.
 
 ### Long version
 
-This App, Generic Battery Drainer is provided by at no cost and is intended for use as is.  
+This App, Battery Drainer is provided by at no cost and is intended for use as is.  
 
 This section is used to inform users regarding the policies with the collection, use, and disclosure of Personal Information if anyone decided to use this Service.  
 
